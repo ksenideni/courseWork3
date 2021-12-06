@@ -1,4 +1,5 @@
 //-----добавление новых элементов продуктов
+let count=0
 setOnClick()
 function setOnClick() {
     document.getElementById("btn-more-products").addEventListener("click", function (event) {
@@ -47,18 +48,19 @@ function showprods() {
     //------------------todo:--------------
     // setOnClick()
     setNotifications()
-    // setListennerToCloseBtn()
+    setListennerToCloseBtn()
 
 }
 //-------уведомление о добавлении в корзину
 setNotifications()
 function setNotifications(){
     let arrOfBtn = document.getElementsByClassName('product-btn')
-    for (let i = 0; i < arrOfBtn.length; i++) {
-        arrOfBtn[i].addEventListener('click', function (event) {
+    for (; count < arrOfBtn.length; count++) {
+        arrOfBtn[count].addEventListener('click', function (event) {
             addToBasket()
         })
     }
+    
 }
 
 
