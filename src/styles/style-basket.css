@@ -252,10 +252,10 @@ margin-bottom: 0;
     .product-title{
         max-width: 20vw;
     }
+    
     .product{
-        width: 45vw;
-        padding: 5px!important;
-    }
+        width: 85%;
+    } 
     .product-btn{
         padding:0 5px!important;
     }
@@ -285,24 +285,6 @@ margin-bottom: 0;
     margin: 0;
     padding: 0 10px
 }
-/*     
-    @media  (max-width: 600px){
-        .day{
-            flex-direction: row;
-            border-bottom: 2px solid rgb(124, 118, 118);
-        
-            justify-content: space-between;
-        }
-        .days{
-            
-            border: none;
-        }
-        .date{
-            max-width: 25px;
-        }
-    } */
-    
-    
 
 
 @media(max-width : 800px) {
