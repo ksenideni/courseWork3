@@ -1,0 +1,345 @@
+input,label{
+    visibility: hidden;
+}
+
+.logo{
+    display: flex;
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700px;
+    align-items: center;
+    letter-spacing: 4px;
+}
+.logo img{
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 15px;
+}
+
+.header a{
+    text-decoration: none;
+    color: black;/*цвет ссылок*/
+}
+.header a:hover{
+    color: #d61c89; 
+}
+.this-page span{
+    color:#d61c89;
+    font-weight: 500;
+}
+header{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    color: white;
+    line-height: 70px;
+    background: #d61c89;
+    user-select: none;
+}
+.phone a{
+    color:#fff;
+}
+
+#open-menu{
+    width: 45px;
+    height: 45px;
+    background-image: url(../icons/menu.png);
+    background-position: center center;
+    background-size:40px;
+    background-repeat: no-repeat;
+}
+#close-menu{
+    width: 45px;
+    height: 45px;
+    background-image: url(../icons/close.png);
+    background-position: center center;
+    background-size:40px;
+    background-repeat: no-repeat;
+}
+body{
+    /* подключаем шрифты, которые в основном будут использоваться */
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(202, 202, 202);
+    font-size: 14px;
+    margin: 0;
+}
+.title{
+    font-size: 48px;
+    font-weight: 700px;
+}
+.btn{
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px 15px;/*добавим воздуха*/
+    transition: 0.2s ease;    
+}
+.btn:hover{
+    color:#d61c89;
+    background-color: white;
+}
+.main-footer{
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    background-color: white; 
+}
+.banner-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog{
+    padding-top: 100px;
+}
+.products{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    margin:5px;
+    padding: 15px;
+}
+.product-title{
+    text-align: center;
+    display: flex;
+    font-size: 14px;
+}
+.product-img img{
+    display: block;
+    width:21vw;
+    height: auto;
+    padding: 5px;
+      margin: 0 auto; /*картинка по центру*/
+    
+}
+
+.product-price{
+font-size: 16px;
+font-weight: 500;
+margin-top: 14px;
+letter-spacing: 1px;
+}
+
+.product-btn{
+    font-size:14px;
+    border-radius: 30px;
+    background-color: #d61c89;
+    border: 2px solid #d61c89;
+    color: #fff;
+    padding: 6px 41px;
+    text-decoration: none;
+    transition: 0.2s ease;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+.product-btn:hover{
+    background-color: #fff;
+    color: #d61c89;
+}
+
+
+.btn-center{
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    visibility: inherit;
+}
+/* Собственно сам слайдер */
+.slider{
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+    margin-bottom: 15px;
+}
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .item img {
+    margin:50px 0;
+    object-fit: cover;
+    width: 100%;
+    border: none !important;
+    box-shadow: none !important;
+}
+/* Кнопки вперед и назад */
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* При наведении на кнопки добавляем фон кнопок */
+.slider .prev:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* Заголовок слайда */
+.slideText {
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+    /* Выравнивание текста по горизонтали и по вертикали*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* Тень*/
+    text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+}
+/* Кружочки */
+.slider-dots {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active,
+.slider-dots_item:hover {
+    background-color: #d61c89;
+}
+/* Анимация слайдов */
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@media(max-width : 540px){
+    label{
+        visibility: visible;
+    }
+    .header{
+        z-index: 500;
+        padding: 0;
+        flex-direction: column;
+        position: fixed;
+        top:0;
+        width: 250px;
+        left: -250px;
+        height: 80%;
+        background: #ce3e92;
+        color: black;
+        transition:  .5s ease;
+    }
+    .this-page span{
+        font-weight:bold;
+        font-size: 18px;
+        color: white;
+    }
+    .header a{
+        padding-top: 25px;
+        display: block;
+        height: 65px;
+        width: 100%;
+        color: white;
+        transition: all .5s ease;
+    }
+    .header a span{
+        margin: 20px;
+    }
+    .header a:hover{
+        color: #d61c89;
+        background-color: #fff;
+    }
+    .main-header{
+        width: 100%;
+    }
+    header{
+        justify-content: center;
+        margin: 0;
+    }
+    #check{
+        display: none;
+    }
+    label #open-menu,label #close-menu{
+        position: absolute;
+        cursor: pointer;
+        color: white;
+        padding: 5px;
+        height: 45px;
+        width: 45px;
+        text-align: center;
+        line-height: 45px;
+        transition: all .5s ease;
+    }
+    label #close-menu{
+        opacity: 0;
+        visibility: hidden;
+    }
+    #check:checked ~ .main-header .header{
+        left: 0;
+    }
+    #check:checked ~ label #open-menu{
+        margin-left: 245px;
+        opacity: 0;
+        visibility: hidden;
+    }
+    #check:checked ~ label #close-menu{
+        margin-left: 245px;
+        opacity: 1;
+        visibility: visible;
+    }
+    .city, .phone{
+        display: none;
+    }
+    /*убрать точки*/
+    .slider-dots, .prev, .next{
+        display: none;
+    }
+    .slider .item img {
+        margin:10px 0!important;
+    }
+  }
+  @media(max-width : 800px) {
+    
+      /*убрать точки*/
+      .slider-dots, .prev, .next{
+        display: none;
+    }
+    .slider .item img {
+      margin:10px 0!important;
+  }
+}
